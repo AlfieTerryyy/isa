@@ -71,6 +71,19 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+<!-- Confetti Effect -->
+    <script>
+        // Function to create confetti
+        function fireConfetti() {
+            confetti({
+                particleCount: 200,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
 
+        // Trigger confetti effect on page load
+        window.onload = fireConfetti;
+    </script>
 </body>
 </html>
