@@ -9,6 +9,9 @@
     <meta name="author" content="Isa Lockhart">
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="Logo3.ico">
+
+    <!-- Include canvas-confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.0/dist/confetti.browser.min.js"></script>
 </head>
 <body class="is-preload">
 
@@ -23,7 +26,7 @@
                 <header id="header">
                     <a href="index.html" class="logo"><strong>Isa's</strong> Website!!!</a>
                     <ul class="icons">
-										<li><a href="https://www.instagram.com/isa.lockhart/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.instagram.com/isa.lockhart/?hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                     </ul>
                 </header>
 
@@ -84,6 +87,21 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Confetti Effect -->
+    <script>
+        // Function to create confetti
+        function fireConfetti() {
+            confetti({
+                particleCount: 200,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        // Trigger confetti effect on page load
+        window.onload = fireConfetti;
+    </script>
 
 </body>
 </html>
